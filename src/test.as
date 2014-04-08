@@ -2,7 +2,7 @@ package
 {
 	/**
 	 * ...
-	 * @author Marco Domingo & David Rodriguezfdfdf
+	 * @author Marco Domingo & David Rodriguez algo
 	 */
 	public class test 
 	{
