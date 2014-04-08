@@ -8,14 +8,14 @@
     <movie fps="30" />
     <movie width="800" />
     <movie height="600" />
-    <movie version="12" />
-    <movie minorVersion="0" />
+    <movie version="11" />
+    <movie minorVersion="9" />
     <movie platform="Flash Player" />
     <movie background="#FFFFFF" />
   </output>
   <!-- Other classes to be compiled into your SWF -->
   <classpaths>
-    <class path="PrimaryFeather-Starling-Framework-1a50854\starling\src" />
+    <class path="..\..\..\Downloads\PrimaryFeather-Starling-Framework-v1.4.1-0-g1a50854\PrimaryFeather-Starling-Framework-1a50854\starling\src" />
     <class path="src" />
   </classpaths>
   <!-- Build options -->
