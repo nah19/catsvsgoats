@@ -6,7 +6,7 @@ package
 	import starling.textures.TextureAtlas;
     import starling.utils.AssetManager;
 	import flash.display.Bitmap;
-	import flash.display3D.textures.Texture;
+	//import flash.display3D.textures.Texture;
 	import flash.utils.Dictionary;
 	/**
 	 * ...

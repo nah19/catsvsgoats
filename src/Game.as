@@ -8,6 +8,8 @@ package
 	 */
 	public class Game extends Sprite
 	{		
+		private var menuInicio:Menu;
+		
 		public function Game()
 		{
 			super();
@@ -17,6 +19,9 @@ package
 		private function onAddedToStage(event:Event):void
 		{
 			trace("starling framework initialized!");
+			
+			menuInicio = new Menu();
+			this.addChild(menuInicio);
 		}
 	}
 

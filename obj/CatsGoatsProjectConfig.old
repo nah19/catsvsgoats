@@ -32,8 +32,9 @@
     </define>
     <verbose-stacktraces>true</verbose-stacktraces>
     <source-path append="true">
-      <path-element>C:\Users\Marco\Documents\UJI\CatsGoatsProject\src</path-element>
+      <path-element>C:\Users\Marco\Documents\UJI\CatsGoatsProject\PrimaryFeather-Starling-Framework-1a50854\starling\src</path-element>
       <path-element>C:\Users\Marco\Documents\UJI\CatsGoatsProject\Hi-ReS-Stats-master\src</path-element>
+      <path-element>C:\Users\Marco\Documents\UJI\CatsGoatsProject\src</path-element>
       <path-element>C:\Program Files (x86)\FlashDevelop\Library\AS3\classes</path-element>
     </source-path>
   </compiler>
