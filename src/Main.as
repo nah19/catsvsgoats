@@ -10,7 +10,7 @@ package
 	 * ...
 	 * @author Marco Domingo & David Rodriguez
 	 */
-	[SWF(frameRate="60", width="600", height="800", backgroundColor="0x333333")]
+	[SWF(frameRate="60", width="1280", height="720", backgroundColor="0x333333")]
 	public class Main extends Sprite 
 	{
 		private var stats:Stats;
