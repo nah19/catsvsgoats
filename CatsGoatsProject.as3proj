@@ -9,15 +9,15 @@
     <movie width="800" />
     <movie height="600" />
     <movie version="11" />
-    <movie minorVersion="9" />
+    <movie minorVersion="2" />
     <movie platform="Flash Player" />
     <movie background="#FFFFFF" />
   </output>
   <!-- Other classes to be compiled into your SWF -->
   <classpaths>
-    <class path="..\..\..\Downloads\PrimaryFeather-Starling-Framework-v1.4.1-0-g1a50854\PrimaryFeather-Starling-Framework-1a50854\starling\src" />
+    <class path="PrimaryFeather-Starling-Framework-1a50854\starling\src" />
+    <class path="Hi-ReS-Stats-master\src" />
     <class path="src" />
-    <class path="..\libs\Hi-ReS-Stats-master\Hi-ReS-Stats-master\src" />
   </classpaths>
   <!-- Build options -->
   <build>
