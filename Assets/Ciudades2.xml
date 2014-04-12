@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:44bdfc7a6fce4ede92675e8b63f8a48b:9c273a50a59f7620fa824b20b9873b32:83bb0cdb1735951e5c9dddefe3e10ef6$ -->
+<TextureAtlas imagePath="Ciudades2.png">
+    <SubTexture name="Ciudad10-01" x="2" y="1552" width="1280" height="254" frameX="0" frameY="-106" frameWidth="1280" frameHeight="360"/>
+    <SubTexture name="Ciudad11-01" x="2" y="364" width="1280" height="358" frameX="0" frameY="-2" frameWidth="1280" frameHeight="360"/>
+    <SubTexture name="Ciudad12-01" x="2" y="2" width="1280" height="360"/>
+    <SubTexture name="Ciudad7-01" x="2" y="724" width="1280" height="310" frameX="0" frameY="-50" frameWidth="1280" frameHeight="360"/>
+    <SubTexture name="Ciudad8-01" x="2" y="1296" width="1280" height="254" frameX="0" frameY="-106" frameWidth="1280" frameHeight="360"/>
+    <SubTexture name="Ciudad9-01" x="2" y="1036" width="1280" height="258" frameX="0" frameY="-102" frameWidth="1280" frameHeight="360"/>
+</TextureAtlas>
