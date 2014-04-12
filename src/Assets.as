@@ -1,7 +1,7 @@
 package  
 {
-	import flash.display.Bitmap;
-	import flash.display3D.textures.Texture;
+	import flash.display.Bitmap
+	import starling.textures.Texture;
 	import flash.utils.Dictionary;
 	/**
 	 * ...
