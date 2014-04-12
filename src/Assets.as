@@ -1,5 +1,6 @@
 package
 {
+	//comentairo pa marcot
 	import starling.display.Image;
 	import starling.display.Sprite;
 	import starling.textures.Texture;
@@ -42,7 +43,7 @@ package
 		 * @param name -> nombre de la constante que hemos embebido
 		 * */
 		
-		public sttic function getAtlas():TextureAtlas
+		public static function getAtlas():TextureAtlas
 		{
 			
 			if (CiudadesYTitulo == null)
