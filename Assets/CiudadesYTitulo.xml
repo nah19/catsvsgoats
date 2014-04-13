@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
-<!-- $TexturePacker:SmartUpdate:b723f7ed3588f213561d904866918c65:9955b11f0c6eafce17d1c511c1db01f6:078cad6ca3fa763e54b0fd0ac41ecd25$ -->
+<!-- $TexturePacker:SmartUpdate:374a57e8fe0e03c9c26ff214eb38e206:cf57b4a5b8a7cebbf6d766acd7d2e7e4:078cad6ca3fa763e54b0fd0ac41ecd25$ -->
 <TextureAtlas imagePath="CiudadesYTitulo.png">
     <SubTexture name="Ciudad1-01" x="2" y="1088" width="1280" height="348" frameX="0" frameY="-12" frameWidth="1280" frameHeight="360"/>
     <SubTexture name="Ciudad2-01" x="2" y="1438" width="1280" height="336" frameX="0" frameY="-24" frameWidth="1280" frameHeight="360"/>
@@ -8,8 +8,8 @@
     <SubTexture name="Ciudad4-01" x="2" y="364" width="1280" height="360"/>
     <SubTexture name="Ciudad5-01" x="2" y="1776" width="1280" height="248" frameX="0" frameY="-112" frameWidth="1280" frameHeight="360"/>
     <SubTexture name="Ciudad6-01" x="2" y="2" width="1280" height="360"/>
-    <SubTexture name="MultijugadorActivo" x="1284" y="362" width="719" height="358" frameX="-349" frameY="-482" frameWidth="1425" frameHeight="1094"/>
-    <SubTexture name="MultijugadorDesac" x="1284" y="2" width="719" height="358" frameX="-349" frameY="-482" frameWidth="1425" frameHeight="1094"/>
-    <SubTexture name="UnJugadorActivo" x="1284" y="1053" width="719" height="329" frameX="-356" frameY="-283" frameWidth="1425" frameHeight="899"/>
-    <SubTexture name="UnJugadorDesac" x="1284" y="722" width="719" height="329" frameX="-356" frameY="-283" frameWidth="1425" frameHeight="899"/>
+    <SubTexture name="MultijugadorActivo" x="1284" y="335" width="719" height="331" frameX="-10" frameY="-10" frameWidth="741" frameHeight="341"/>
+    <SubTexture name="MultijugadorDesac" x="1284" y="2" width="719" height="331" frameX="-10" frameY="-10" frameWidth="741" frameHeight="341"/>
+    <SubTexture name="UnJugadorActivo" x="1284" y="999" width="719" height="329" frameX="-8" frameY="0" frameWidth="737" frameHeight="339"/>
+    <SubTexture name="UnJugadorDesac" x="1284" y="668" width="719" height="329" frameX="-8" frameY="0" frameWidth="737" frameHeight="339"/>
 </TextureAtlas>
