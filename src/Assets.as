@@ -52,11 +52,11 @@ package
 		 * @param name -> nombre de la constante que hemos embebido
 		 * */
 		
-		 public static function getAtlas():TextureAtlas
+		 public static function getAtlas(name:String):TextureAtlas
 		{
 			if (gameTextureAtlas == null)
 			{
-				var texture:Texture = getTexture("CiudadesYTitulo");
+				var texture:Texture = getTexture(name);
 				var xml:XML = XML(new CiudadesYTituloXML());
 				gameTextureAtlas = new TextureAtlas(texture, xml);
 			}
