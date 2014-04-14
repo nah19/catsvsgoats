@@ -52,7 +52,7 @@ package
 				}
 				
 				isOver = true;
-				trace("show");
+				//trace("show");
 				this.setOver(true);
 			}
 			else
@@ -64,7 +64,7 @@ package
 				}
 				
 				isOver = false;
-				trace("hide");
+				//trace("hide");
 				this.setOver(false);
 			}
 		

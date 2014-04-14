@@ -26,6 +26,9 @@ package
 		[Embed(source = "../Assets/Particles/particleTexture.png")]
 		public static const particle:Class;
 		
+		[Embed(source = "../Assets/ImagenesSinAtlas/Fondo-01.jpg")]
+		public static const FondoCreditos:Class;
+		
 		//Se incrusta la textura que se usara para el fondo que se usara para los botones de seleccion
 		
 		[Embed(source = "../Assets/ImagenesSinAtlas/Fondo12-01.jpg")]
@@ -71,6 +74,7 @@ package
 		private static var gameTextures:Dictionary = new Dictionary();
 		public static var CiudadesYTituloAtlas:TextureAtlas;
 		public static var SpritesAtlas:TextureAtlas;
+		
 		
 		/*
 		 * Devuelve una textura dada. En el caso de que no exista, crea la textura desde la fuente
