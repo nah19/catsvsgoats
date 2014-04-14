@@ -22,6 +22,7 @@ package
 		var back:Button;
 		var marco:Image;
 		var david:Image;
+		var cat:Cat;
 		
 		public function Credits()
 		{
@@ -31,6 +32,7 @@ package
 		
 		private function onAddedToStage(event:Event):void
 		{
+			this.removeEventListener(Event.ADDED_TO_STAGE, onAddedToStage);
 			trace("Menu principal");
 			drawScreen();
 		}
@@ -55,6 +57,11 @@ package
 			david.y = -250;
 			this.addChild(david);
 			
+			cat = new Cat();
+			cat.x = stage.width / 2;
+			cat.y = stage.height / 2;
+			this.addChild(cat);
+			
 			this.addEventListener(Event.TRIGGERED, sceneManager);
 		}
 		
@@ -65,21 +72,17 @@ package
 			{
 				trace("Enviando evento");
 				this.dispatchEvent(new NavigationEvent(NavigationEvent.CHANGE_SCREEN, {id: "backMenu"}, true));
-				
 			}
-		
 		}
 		
 		public function initialize():void
 		{
 			this.visible = true;
-		
 		}
 		
 		public function disposeTemporarily():void
 		{
 			this.visible = false;
-		
 		}
 	
 	}

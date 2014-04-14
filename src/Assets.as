@@ -74,6 +74,7 @@ package
 		private static var gameTextures:Dictionary = new Dictionary();
 		public static var CiudadesYTituloAtlas:TextureAtlas;
 		public static var SpritesAtlas:TextureAtlas;
+		public static var AnimacionGatoAtlas:TextureAtlas;
 		
 		
 		/*

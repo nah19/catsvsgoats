@@ -11,6 +11,7 @@ package
 	import starling.extensions.PDParticleSystem;
 	import starling.textures.Texture;
 	import starling.animation.Juggler;
+	import starling.filters.BlurFilter;
 	
 	/**
 	 * ...
@@ -53,12 +54,14 @@ package
 			ciudadArriba.x = 0;
 			ciudadArriba.y = 0;
 			ciudadArriba.touchable = false;
+			ciudadArriba.filter = BlurFilter.createDropShadow();
 			
 			ciudadAbajo = new Image(Assets.getAtlas("CiudadesYTitulo", Assets.CiudadesYTituloXML, Assets.CiudadesYTituloAtlas).getTexture("Ciudad3-01"));
 			ciudadAbajo.x = 1280;
 			ciudadAbajo.y = 720;
 			ciudadAbajo.rotation = Math.PI;
 			ciudadAbajo.touchable = false;
+			ciudadAbajo.filter = BlurFilter.createDropShadow();
 			
 			//Como las ciudades anteriormente declaradas tienen transparencia se declaran las mismas imagenes de ciudadades pero en blanco
 			//Que tendran la funcion de bloquear la visibilidad por detras de las ciudades, para que asi las particulas no se vean por detras de la ciudad
@@ -97,6 +100,7 @@ package
 			botonSingle.y = -10;
 			botonSingle.touchable = false;
 			botonSingle.pivotX = botonSingle.width / 2;
+		
 			
 			botonMultiplayer = new BotonMejorado(Assets.getAtlas("CiudadesYTitulo", Assets.CiudadesYTituloXML, Assets.CiudadesYTituloAtlas).getTexture("MultijugadorDesac"), "", Assets.getAtlas("CiudadesYTitulo", Assets.CiudadesYTituloXML, Assets.CiudadesYTituloAtlas).getTexture("MultijugadorActivo"), true);
 			botonMultiplayer.x = 640;
@@ -112,11 +116,13 @@ package
 			botonAbajo.y = 720;
 			botonAbajo.rotation = Math.PI;
 			botonAbajo.alpha = 0.7;
+			botonAbajo.filter = BlurFilter.createDropShadow();
 			
 			botonArriba = new BotonMejorado(Assets.getTexture("FondoDesactivado"), "", Assets.getTexture("FondoActivado"), true, botonSingle);
 			botonArriba.x = 0;
 			botonArriba.y = 0;
 			botonArriba.alpha = 0.7;
+			botonArriba.filter = BlurFilter.createDropShadow();
 			
 			botonCredits = new BotonMejorado(Assets.getAtlas("Sprites", Assets.SpritesXML, Assets.SpritesAtlas).getTexture("Credits"));
 			botonCredits.x = 1080;

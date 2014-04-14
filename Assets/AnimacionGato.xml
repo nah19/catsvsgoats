@@ -2,16 +2,16 @@
 <!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
 <!-- $TexturePacker:SmartUpdate:75f968f85619266188eab55d5987674f:9f9dd163ba7bb81dc3e18cc3c3cc23f3:4773a7a26ea901fee18dd8d1ee6b4282$ -->
 <TextureAtlas imagePath="AnimacionGato.png">
-    <SubTexture name="1-01" x="2" y="2" width="216" height="126" frameX="-11" frameY="-62" frameWidth="256" frameHeight="256"/>
-    <SubTexture name="10-01" x="208" y="254" width="182" height="136" frameX="-44" frameY="-60" frameWidth="256" frameHeight="256"/>
-    <SubTexture name="11-01" x="220" y="120" width="208" height="132" frameX="-23" frameY="-63" frameWidth="256" frameHeight="256"/>
-    <SubTexture name="12-01" x="220" y="2" width="214" height="116" frameX="-12" frameY="-62" frameWidth="256" frameHeight="256"/>
-    <SubTexture name="2-01" x="2" y="130" width="204" height="134" frameX="-25" frameY="-61" frameWidth="256" frameHeight="256"/>
-    <SubTexture name="3-01" x="2" y="266" width="182" height="134" frameX="-48" frameY="-62" frameWidth="256" frameHeight="256"/>
-    <SubTexture name="4-01" x="184" y="522" width="178" height="132" frameX="-56" frameY="-66" frameWidth="256" frameHeight="256"/>
-    <SubTexture name="5-01" x="2" y="402" width="182" height="118" frameX="-59" frameY="-76" frameWidth="256" frameHeight="256"/>
-    <SubTexture name="6-01" x="186" y="392" width="182" height="128" frameX="-59" frameY="-71" frameWidth="256" frameHeight="256"/>
-    <SubTexture name="7-01" x="2" y="656" width="174" height="132" frameX="-62" frameY="-66" frameWidth="256" frameHeight="256"/>
-    <SubTexture name="8-01" x="2" y="790" width="178" height="130" frameX="-58" frameY="-66" frameWidth="256" frameHeight="256"/>
-    <SubTexture name="9-01" x="2" y="522" width="180" height="132" frameX="-53" frameY="-63" frameWidth="256" frameHeight="256"/>
+    <SubTexture name="cat_01-01" x="2" y="2" width="216" height="126" frameX="-11" frameY="-62" frameWidth="256" frameHeight="256"/> 
+    <SubTexture name="cat_02-01" x="2" y="130" width="204" height="134" frameX="-25" frameY="-61" frameWidth="256" frameHeight="256"/>
+    <SubTexture name="cat_03-01" x="2" y="266" width="182" height="134" frameX="-48" frameY="-62" frameWidth="256" frameHeight="256"/>
+    <SubTexture name="cat_04-01" x="184" y="522" width="178" height="132" frameX="-56" frameY="-66" frameWidth="256" frameHeight="256"/>
+    <SubTexture name="cat_05-01" x="2" y="402" width="182" height="118" frameX="-59" frameY="-76" frameWidth="256" frameHeight="256"/>
+    <SubTexture name="cat_06-01" x="186" y="392" width="182" height="128" frameX="-59" frameY="-71" frameWidth="256" frameHeight="256"/>
+    <SubTexture name="cat_07-01" x="2" y="656" width="174" height="132" frameX="-62" frameY="-66" frameWidth="256" frameHeight="256"/>
+    <SubTexture name="cat_08-01" x="2" y="790" width="178" height="130" frameX="-58" frameY="-66" frameWidth="256" frameHeight="256"/>
+    <SubTexture name="cat_09-01" x="2" y="522" width="180" height="132" frameX="-53" frameY="-63" frameWidth="256" frameHeight="256"/>
+	<SubTexture name="cat_10-01" x="208" y="254" width="182" height="136" frameX="-44" frameY="-60" frameWidth="256" frameHeight="256"/>
+    <SubTexture name="cat_11-01" x="220" y="120" width="208" height="132" frameX="-23" frameY="-63" frameWidth="256" frameHeight="256"/>
+    <SubTexture name="cat_12-01" x="220" y="2" width="214" height="116" frameX="-12" frameY="-62" frameWidth="256" frameHeight="256"/>
 </TextureAtlas>
