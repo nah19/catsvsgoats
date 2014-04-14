@@ -12,7 +12,7 @@ package
 	 * @author Marco Domingo & David Rodriguez
 	 */
 	
-	 //Clase que extiende la de Button, puediendo hacer mouseOver, y pudiendo igualar el estado de otro boton al de este
+	//Clase que extiende la de Button, puediendo hacer mouseOver, y pudiendo igualar el estado de otro boton al de este
 	public class BotonMejorado extends Button
 	{
 		var defaultTexture:Texture

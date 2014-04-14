@@ -26,6 +26,8 @@ package
 		var botonArriba:BotonMejorado;
 		var botonSingle:BotonMejorado;
 		var botonMultiplayer:BotonMejorado;
+		var botonCredits:Button;
+		var botonExit:BotonMejorado;
 		
 		var ambientParticlesUp:PDParticleSystem;
 		var ambientParticlesDown:PDParticleSystem;
@@ -45,12 +47,12 @@ package
 		private function drawScreen():void
 		{
 			//Se declaran y se situan la ciudades que saldran en el fondo del menu
-			ciudadArriba = new Image(Assets.getAtlas().getTexture("Ciudad2-01"));
+			ciudadArriba = new Image(Assets.getAtlas("CiudadesYTitulo", Assets.CiudadesYTituloXML, Assets.CiudadesYTituloAtlas).getTexture("Ciudad2-01"));
 			ciudadArriba.x = 0;
 			ciudadArriba.y = 0;
 			ciudadArriba.touchable = false;
 			
-			ciudadAbajo = new Image(Assets.getAtlas().getTexture("Ciudad3-01"));
+			ciudadAbajo = new Image(Assets.getAtlas("CiudadesYTitulo", Assets.CiudadesYTituloXML, Assets.CiudadesYTituloAtlas).getTexture("Ciudad3-01"));
 			ciudadAbajo.x = 1280;
 			ciudadAbajo.y = 720;
 			ciudadAbajo.rotation = Math.PI;
@@ -92,12 +94,12 @@ package
 			//Se declaran los botones de single player y multiplayer, estos solo tienen una funcion estetica ya que tienen su tocabilidad desactivada
 			//ya que los botones que verdaderamente manejan el estado del boton son los declarados mas abajo.
 			//Esto esta hecho para independizar el comportamiento del boton  del fondo y que se puedan ejecutar funciones como "mouseOver" o "Scale" con independencia
-			botonSingle = new BotonMejorado(Assets.getAtlas().getTexture("UnJugadorDesac"), "", Assets.getAtlas().getTexture("UnJugadorActivo"), true);
+			botonSingle = new BotonMejorado(Assets.getAtlas("CiudadesYTitulo", Assets.CiudadesYTituloXML, Assets.CiudadesYTituloAtlas).getTexture("UnJugadorDesac"), "", Assets.getAtlas("CiudadesYTitulo", Assets.CiudadesYTituloXML, Assets.CiudadesYTituloAtlas).getTexture("UnJugadorActivo"), true);
 			botonSingle.x = 270;
 			botonSingle.y = 0;
 			botonSingle.touchable = false;
 			
-			botonMultiplayer = new BotonMejorado(Assets.getAtlas().getTexture("MultijugadorDesac"), "", Assets.getAtlas().getTexture("MultijugadorActivo"), true);
+			botonMultiplayer = new BotonMejorado(Assets.getAtlas("CiudadesYTitulo", Assets.CiudadesYTituloXML, Assets.CiudadesYTituloAtlas).getTexture("MultijugadorDesac"), "", Assets.getAtlas("CiudadesYTitulo", Assets.CiudadesYTituloXML, Assets.CiudadesYTituloAtlas).getTexture("MultijugadorActivo"), true);
 			botonMultiplayer.x = 270;
 			botonMultiplayer.y = 380;
 			botonMultiplayer.touchable = false;
@@ -116,6 +118,15 @@ package
 			botonArriba.x = 0;
 			botonArriba.y = 0;
 			botonArriba.alpha = 0.7;
+			
+			botonCredits = new BotonMejorado(Assets.getAtlas("Sprites", Assets.SpritesXML, Assets.SpritesAtlas).getTexture("Credits"));
+			botonCredits.x = 1080;
+			botonCredits.y = 280;
+			
+			botonExit = new BotonMejorado(Assets.getAtlas("Sprites", Assets.SpritesXML, Assets.SpritesAtlas).getTexture("Exit"));
+			botonExit.x = -15;
+			botonExit.y = 280;
+			
 			
 			
 			//Se añade a la escena primero las particulas para que estas se situen al fondo del todo
@@ -142,7 +153,8 @@ package
 			this.addChild(botonMultiplayer);
 			this.addChild(botonSingle);
 			
-			
+			this.addChild(botonCredits);
+			this.addChild(botonExit);
 		}
 	
 	}
