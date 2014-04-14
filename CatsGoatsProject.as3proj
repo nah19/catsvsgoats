@@ -18,6 +18,7 @@
     <class path="PrimaryFeather-Starling-Framework-1a50854\starling\src" />
     <class path="Hi-ReS-Stats-master\src" />
     <class path="src" />
+    <class path="Starling-Extension-Particle-System-master\src" />
   </classpaths>
   <!-- Build options -->
   <build>
