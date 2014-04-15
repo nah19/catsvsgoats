@@ -36,6 +36,10 @@ package
 			this.addChild(cat);
 		}
 		
+		public function jumpingCat (jump:Boolean = false):void
+		{
+			(jump) ? cat.pause() : cat.play();
+		}
 	}
 
 }

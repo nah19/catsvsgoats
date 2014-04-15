@@ -99,25 +99,24 @@ package
 				
 				if (localPos.y>360)
 				{
-					
+					goat.jumpingGoat(true);
 					var tweenGoat:Tween = new Tween(goat, 0.4, Transitions.EASE_IN_OUT);
 					tweenGoat.reverse = true;
 					tweenGoat.moveTo( goat.x, goat.y + 100);
 					tweenGoat.repeatCount = 2;
+					tweenGoat.onComplete = goat.jumpingGoat;
 					Starling.juggler.add(tweenGoat); 
 					
 				} 
 				else
 				{
+					cat.jumpingCat(true);
 					var tweenCat:Tween = new Tween(cat, 0.4, Transitions.EASE_IN_OUT);
 					tweenCat.reverse = true;
 					tweenCat.animate("y", cat.y - 100);
 					tweenCat.repeatCount = 2;
+					tweenCat.onComplete = cat.jumpingCat; 
 					Starling.juggler.add(tweenCat);
-					
-					//var tween:Tween = new Tween(cat, 2.0, Transitions.EASE_IN_OUT);
-				    //tween.animate("y", cat.y - 110);
-					//Starling.juggler.add(tween);
 				}
 			}
 			

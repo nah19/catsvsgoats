@@ -36,9 +36,9 @@ package
 			this.addChild(goat);
 		}
 		
-		public function jumpingGoat():void
+		public function jumpingGoat(jump:Boolean = false):void
 		{
-			
+			(jump) ? goat.pause() : goat.play();
 		}
 	}
 
