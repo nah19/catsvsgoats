@@ -36,6 +36,10 @@ package
 			this.addChild(goat);
 		}
 		
+		public function jumpingGoat():void
+		{
+			
+		}
 	}
 
 }

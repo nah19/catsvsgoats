@@ -1,5 +1,6 @@
 package  
 {
+	import flash.display.BitmapData;
 	import flash.geom.Point;
 	import starling.animation.Tween;
 	import starling.display.Image;
@@ -12,6 +13,8 @@ package
 	import starling.animation.Juggler;
 	import starling.animation.Transitions;
 	import starling.core.Starling;
+	import starling.display.Quad;
+	
 	/**
 	 * ...
 	 * @author Marco Domingo & David Rodriguez
@@ -69,7 +72,7 @@ package
 			
 			cat = new Cat();
 			cat.x = 150
-			cat.y = (stage.stageHeight / 2) - 100;
+			cat.y = (stage.stageHeight / 2) - 80;
 			cat.scaleX = 0.8;
 			cat.scaleY = 0.8;
 			this.addChild(cat);
@@ -79,9 +82,12 @@ package
 			goat.y = (stage.stageHeight / 2) + 75;
 			goat.scaleX = 0.45;
 			goat.scaleY = -0.45;
-			
 			this.addChild(goat);
 			
+			var quad:Quad = new Quad(stage.stageWidth,60,0x000000);
+			quad.x = 0;
+			quad.y = (stage.stageHeight/2)-30;
+			addChild(quad);
 		}
 		
 		private function onTouch(event:TouchEvent):void
@@ -105,7 +111,7 @@ package
 				{
 					var tweenCat:Tween = new Tween(cat, 0.4, Transitions.EASE_IN_OUT);
 					tweenCat.reverse = true;
-					tweenCat.moveTo(cat.x, cat.y - 110);
+					tweenCat.animate("y", cat.y - 100);
 					tweenCat.repeatCount = 2;
 					Starling.juggler.add(tweenCat);
 					
