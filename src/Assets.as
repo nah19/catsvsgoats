@@ -26,6 +26,9 @@ package
 		[Embed(source = "../Assets/Particles/particleTexture.png")]
 		public static const particle:Class;
 		
+		[Embed(source = "../Assets/ImagenesSinAtlas/Fondo-01.jpg")]
+		public static const FondoCreditos:Class;
+		
 		//Se incrusta la textura que se usara para el fondo que se usara para los botones de seleccion
 		
 		[Embed(source = "../Assets/ImagenesSinAtlas/Fondo12-01.jpg")]
@@ -33,6 +36,10 @@ package
 		
 		[Embed(source = "../Assets/ImagenesSinAtlas/FondoActivo-01.jpg")]
 		public static const FondoActivado:Class;
+		
+		//Textura para el fondo parallax
+		[Embed(source = "../Assets/ImagenesSinAtlas/FondoArribaActivo-01.jpg")]
+		public static const TopBg:Class;
 		
 		//Se incrustan la texturas que bloquean la visibilidad de las particulas
 		
@@ -50,25 +57,56 @@ package
 		[Embed(source="../Assets/CiudadesYTitulo.xml",mimeType="application/octet-stream")]
 		public static const CiudadesYTituloXML:Class;
 		
+		[Embed(source="../Assets/Ciudades2.png")]
+		public static const Ciudades2:Class;
+		
+		[Embed(source="../Assets/Ciudades2.xml",mimeType="application/octet-stream")]
+		public static const Ciudades2XML:Class;
+		
+		[Embed(source="../Assets/Sprites.png")]
+		public static const Sprites:Class;
+		
+		[Embed(source="../Assets/Sprites.xml",mimeType="application/octet-stream")]
+		public static const SpritesXML:Class;
+		
+		[Embed(source="../Assets/AnimacionGato.png")]
+		public static const AnimacionGato:Class;
+		
+		[Embed(source="../Assets/AnimacionGato.xml",mimeType="application/octet-stream")]
+		public static const AnimacionGatoXML:Class;
 		
 		private static var gameTextures:Dictionary = new Dictionary();
-		private static var gameTextureAtlas:TextureAtlas;
+		public static var CiudadesYTituloAtlas:TextureAtlas;
+		public static var SpritesAtlas:TextureAtlas;
+		public static var AnimacionGatoAtlas:TextureAtlas;
+		
 		
 		/*
 		 * Devuelve una textura dada. En el caso de que no exista, crea la textura desde la fuente
 		 * @param name -> nombre de la constante que hemos embebido
 		 * */
 		
-		 public static function getAtlas(name:String):TextureAtlas
+		public static function getAtlas(name:String, archivoXML:Class, atlas:TextureAtlas):TextureAtlas
 		{
-			if (gameTextureAtlas == null)
+			if (atlas == null)
 			{
 				var texture:Texture = getTexture(name);
-				var xml:XML = XML(new CiudadesYTituloXML());
-				gameTextureAtlas = new TextureAtlas(texture, xml);
+				var xml:XML = XML(new archivoXML);
+				atlas = new TextureAtlas(texture, xml);
 			}
-			return gameTextureAtlas;
+			return atlas;
 		}
+		
+		//public static function getAtlas():TextureAtlas
+		//{
+			//if (gameTextureAtlas == null)
+			//{
+				//var texture:Texture = getTexture("CiudadesYTitulo");
+				//var xml:XML = XML(new CiudadesYTituloXML());
+				//gameTextureAtlas = new TextureAtlas(texture, xml);
+			//}
+			//return gameTextureAtlas;
+		//}
 		
 		public static function getTexture(name:String):Texture
 		{
