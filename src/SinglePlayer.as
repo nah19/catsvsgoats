@@ -1,9 +1,17 @@
 package  
 {
+	import flash.geom.Point;
+	import starling.animation.Tween;
 	import starling.display.Image;
 	import starling.display.Sprite;
 	import starling.events.Event; 
+	import starling.events.Touch;
+	import starling.events.TouchEvent;
+	import starling.events.TouchPhase;
 	import starling.filters.BlurFilter;
+	import starling.animation.Juggler;
+	import starling.animation.Transitions;
+	import starling.core.Starling;
 	/**
 	 * ...
 	 * @author Marco Domingo & David Rodriguez
@@ -18,6 +26,7 @@ package
 		private var nombreFondo:String;
 		private var cat:Cat;
 		private var goat:Goat;
+		private var touch:Touch;
 		
 		public function SinglePlayer() 
 		{
@@ -73,6 +82,30 @@ package
 			
 		}
 		
+		private function onTouch(event:TouchEvent):void
+		{
+			var touch:Touch = event.getTouch(this, TouchPhase.BEGAN);
+			if (touch)
+			{
+				var localPos:Point = touch.getLocation(this);
+				
+				if (localPos.y>360)
+				{
+					var tween:Tween = new Tween(goat, 2.0, Transitions.EASE_IN_OUT);
+				    tween.animate("y", goat.y + 110);
+					Starling.juggler.add(tween);
+				} 
+				else
+				{
+					var tween:Tween = new Tween(cat, 2.0, Transitions.EASE_IN_OUT);
+				    tween.animate("y", cat.y - 110);
+					Starling.juggler.add(tween);
+				}
+			}
+			
+			
+		}
+		
 		public function disposeTemporarily():void
 		{
 			this.visible = false;
@@ -82,6 +115,7 @@ package
 		public function initialize():void
 		{
 			this.visible = true;
+			this.addEventListener(TouchEvent.TOUCH, onTouch);
 		}
 		
 	}

@@ -17,13 +17,13 @@ package
 		private var myStarling:Starling;
 		public function Main():void 
 		{
-			
-			
-			
 			stats = new Stats();
 			this.addChild(stats);
 			
+			Starling.multitouchEnabled = true;
+			
 			myStarling = new Starling(Game, stage);
+			myStarling.simulateMultitouch = true;
 			myStarling.antiAliasing = 1;
 			myStarling.start();
 			
