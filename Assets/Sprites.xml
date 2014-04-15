@@ -2,45 +2,45 @@
 <!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
 <!-- $TexturePacker:SmartUpdate:220ac54e430492bc4d9310a2522c48fe:4a7ff42497dee3f6d178c22d90462050:c43aba4fdaea3040fc976da76a6a1485$ -->
 <TextureAtlas imagePath="Sprites.png">
-    <SubTexture name="Avestruz1" x="869" y="517" width="125" height="201"/>
-    <SubTexture name="Avispa1" x="625" y="778" width="59" height="77"/>
+    <SubTexture name="Object_Avestruz1" x="869" y="517" width="125" height="201"/>
+    <SubTexture name="Object_Avispa1" x="625" y="778" width="59" height="77"/>
     <SubTexture name="Back" x="2" y="583" width="165" height="122" frameX="-1" frameY="-9" frameWidth="169" frameHeight="154"/>
-    <SubTexture name="Bart1" x="279" y="720" width="72" height="149"/>
-    <SubTexture name="Bici1" x="550" y="418" width="228" height="111"/>
-    <SubTexture name="Bici2" x="556" y="644" width="170" height="110"/>
-    <SubTexture name="Bici3" x="556" y="531" width="206" height="111"/>
-    <SubTexture name="Bici4" x="874" y="406" width="129" height="109"/>
-    <SubTexture name="Cabina1" x="916" y="2" width="105" height="201"/>
-    <SubTexture name="Carrito1" x="169" y="565" width="93" height="111"/>
-    <SubTexture name="Coche1" x="550" y="153" width="356" height="149"/>
-    <SubTexture name="Coche2" x="550" y="304" width="322" height="112"/>
-    <SubTexture name="Coche3" x="550" y="2" width="364" height="149"/>
+    <SubTexture name="Object_Bart1" x="279" y="720" width="72" height="149"/>
+    <SubTexture name="Object_Bici1" x="550" y="418" width="228" height="111"/>
+    <SubTexture name="Object_Bici2" x="556" y="644" width="170" height="110"/>
+    <SubTexture name="Object_Bici3" x="556" y="531" width="206" height="111"/>
+    <SubTexture name="Object_Bici4" x="874" y="406" width="129" height="109"/>
+    <SubTexture name="Object_Cabina1" x="916" y="2" width="105" height="201"/>
+    <SubTexture name="Object_Carrito1" x="169" y="565" width="93" height="111"/>
+    <SubTexture name="Object_Coche1" x="550" y="153" width="356" height="149"/>
+    <SubTexture name="Object_Coche2" x="550" y="304" width="322" height="112"/>
+    <SubTexture name="Object_Coche3" x="550" y="2" width="364" height="149"/>
     <SubTexture name="Credits" x="313" y="871" width="198" height="141" frameX="-11" frameY="-7" frameWidth="244" frameHeight="219"/>
-    <SubTexture name="Cylon1" x="388" y="563" width="55" height="77"/>
+    <SubTexture name="Object_Cylon1" x="388" y="563" width="55" height="77"/>
     <SubTexture name="David" x="2" y="2" width="546" height="242" frameX="-203" frameY="-224" frameWidth="936" frameHeight="588"/>
     <SubTexture name="Exit" x="353" y="720" width="201" height="139" frameX="0" frameY="-9" frameWidth="219" frameHeight="219"/>
-    <SubTexture name="Farola1" x="339" y="563" width="47" height="111"/>
-    <SubTexture name="Farola2" x="109" y="720" width="51" height="197"/>
-    <SubTexture name="Farola3" x="908" y="205" width="108" height="199"/>
-    <SubTexture name="Farola4" x="59" y="720" width="48" height="198"/>
-    <SubTexture name="Gallo1" x="556" y="778" width="67" height="80"/>
-    <SubTexture name="Gallo2" x="2" y="921" width="77" height="82"/>
-    <SubTexture name="Lampara1" x="2" y="720" width="55" height="199"/>
-    <SubTexture name="Lampara2" x="157" y="919" width="74" height="81"/>
+    <SubTexture name="Object_Farola1" x="339" y="563" width="47" height="111"/>
+    <SubTexture name="Object_Farola2" x="109" y="720" width="51" height="197"/>
+    <SubTexture name="Object_Farola3" x="908" y="205" width="108" height="199"/>
+    <SubTexture name="Object_Farola4" x="59" y="720" width="48" height="198"/>
+    <SubTexture name="Object_Gallo1" x="556" y="778" width="67" height="80"/>
+    <SubTexture name="Object_Gallo2" x="2" y="921" width="77" height="82"/>
+    <SubTexture name="Object_Lampara1" x="2" y="720" width="55" height="199"/>
+    <SubTexture name="Object_Lampara2" x="157" y="919" width="74" height="81"/>
     <SubTexture name="Marco" x="2" y="246" width="546" height="233" frameX="-203" frameY="-233" frameWidth="936" frameHeight="589"/>
-    <SubTexture name="Pajaro1" x="780" y="418" width="92" height="81"/>
-    <SubTexture name="Pajaro2" x="81" y="920" width="74" height="81"/>
-    <SubTexture name="Pajaro3" x="2" y="481" width="99" height="83"/>
-    <SubTexture name="Pato1" x="353" y="481" width="93" height="80"/>
-    <SubTexture name="Reno1" x="513" y="861" width="116" height="110"/>
-    <SubTexture name="Señal1" x="448" y="531" width="101" height="109"/>
-    <SubTexture name="Señal2" x="162" y="720" width="115" height="149"/>
-    <SubTexture name="Señal3" x="233" y="871" width="78" height="149"/>
-    <SubTexture name="Spock1" x="257" y="481" width="94" height="80"/>
-    <SubTexture name="Stop" x="764" y="583" width="102" height="111"/>
-    <SubTexture name="Tetera1" x="103" y="481" width="77" height="82"/>
-    <SubTexture name="Tetera2" x="182" y="481" width="73" height="81"/>
-    <SubTexture name="Tetera3" x="780" y="501" width="87" height="80"/>
-    <SubTexture name="Tetera4" x="728" y="696" width="124" height="80"/>
-    <SubTexture name="Torradora1" x="264" y="563" width="73" height="111"/>
+    <SubTexture name="Object_Pajaro1" x="780" y="418" width="92" height="81"/>
+    <SubTexture name="Object_Pajaro2" x="81" y="920" width="74" height="81"/>
+    <SubTexture name="Object_Pajaro3" x="2" y="481" width="99" height="83"/>
+    <SubTexture name="Object_Pato1" x="353" y="481" width="93" height="80"/>
+    <SubTexture name="Object_Reno1" x="513" y="861" width="116" height="110"/>
+    <SubTexture name="Object_Señal1" x="448" y="531" width="101" height="109"/>
+    <SubTexture name="Object_Señal2" x="162" y="720" width="115" height="149"/>
+    <SubTexture name="Object_Señal3" x="233" y="871" width="78" height="149"/>
+    <SubTexture name="Object_Spock1" x="257" y="481" width="94" height="80"/>
+    <SubTexture name="Object_Stop" x="764" y="583" width="102" height="111"/>
+    <SubTexture name="Object_Tetera1" x="103" y="481" width="77" height="82"/>
+    <SubTexture name="Object_Tetera2" x="182" y="481" width="73" height="81"/>
+    <SubTexture name="Object_Tetera3" x="780" y="501" width="87" height="80"/>
+    <SubTexture name="Object_Tetera4" x="728" y="696" width="124" height="80"/>
+    <SubTexture name="Object_Torradora1" x="264" y="563" width="73" height="111"/>
 </TextureAtlas>
