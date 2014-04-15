@@ -28,6 +28,8 @@ package
 		private var goat:Goat;
 		private var touch:Touch;
 		
+		
+		
 		public function SinglePlayer() 
 		{
 			super();
@@ -91,15 +93,25 @@ package
 				
 				if (localPos.y>360)
 				{
-					var tween:Tween = new Tween(goat, 2.0, Transitions.EASE_IN_OUT);
-				    tween.animate("y", goat.y + 110);
-					Starling.juggler.add(tween);
+					
+					var tweenGoat:Tween = new Tween(goat, 0.4, Transitions.EASE_IN_OUT);
+					tweenGoat.reverse = true;
+					tweenGoat.moveTo( goat.x, goat.y + 100);
+					tweenGoat.repeatCount = 2;
+					Starling.juggler.add(tweenGoat); 
+					
 				} 
 				else
 				{
-					var tween:Tween = new Tween(cat, 2.0, Transitions.EASE_IN_OUT);
-				    tween.animate("y", cat.y - 110);
-					Starling.juggler.add(tween);
+					var tweenCat:Tween = new Tween(cat, 0.4, Transitions.EASE_IN_OUT);
+					tweenCat.reverse = true;
+					tweenCat.moveTo(cat.x, cat.y - 110);
+					tweenCat.repeatCount = 2;
+					Starling.juggler.add(tweenCat);
+					
+					//var tween:Tween = new Tween(cat, 2.0, Transitions.EASE_IN_OUT);
+				    //tween.animate("y", cat.y - 110);
+					//Starling.juggler.add(tween);
 				}
 			}
 			
