@@ -18,6 +18,51 @@ package
 	 */
 	public class Assets
 	{
+		[Embed(source = "../Assets/ImagenesSinAtlas/Fondo1-01.jpg")]
+		public static const Fondo1:Class;
+		
+		[Embed(source = "../Assets/ImagenesSinAtlas/Fondo2-01.jpg")]
+		public static const Fondo2:Class;
+		
+		[Embed(source = "../Assets/ImagenesSinAtlas/Fondo3-01.jpg")]
+		public static const Fondo3:Class;
+		
+		[Embed(source = "../Assets/ImagenesSinAtlas/Fondo4-01.jpg")]
+		public static const Fondo4:Class;
+		
+		[Embed(source = "../Assets/ImagenesSinAtlas/Fondo5-01.jpg")]
+		public static const Fondo5:Class;
+		
+		[Embed(source = "../Assets/ImagenesSinAtlas/Fondo6-01.jpg")]
+		public static const Fondo6:Class;
+		
+		[Embed(source = "../Assets/ImagenesSinAtlas/Fondo7-01.jpg")]
+		public static const Fondo7:Class;
+		
+		[Embed(source = "../Assets/ImagenesSinAtlas/Fondo8-01.jpg")]
+		public static const Fondo8:Class;
+		
+		[Embed(source = "../Assets/ImagenesSinAtlas/Fondo9-01.jpg")]
+		public static const Fondo9:Class;
+		
+		[Embed(source = "../Assets/ImagenesSinAtlas/Fondo10-01.jpg")]
+		public static const Fondo10:Class;
+		
+		[Embed(source = "../Assets/ImagenesSinAtlas/Fondo11-01.jpg")]
+		public static const Fondo11:Class;
+		
+		[Embed(source = "../Assets/ImagenesSinAtlas/Fondo12-01.jpg")]
+		public static const Fondo12:Class;
+		
+		[Embed(source = "../Assets/ImagenesSinAtlas/Fondo13-01.jpg")]
+		public static const Fondo13:Class;
+		
+		[Embed(source = "../Assets/ImagenesSinAtlas/Fondo14-01.jpg")]
+		public static const Fondo14:Class;
+		
+		[Embed(source = "../Assets/ImagenesSinAtlas/Fondo15-01.jpg")]
+		public static const Fondo15:Class;
+		
 		//Se incrustan la texturas de las particulas y el xml (pex) que se usaran en el fondo del menu
 		
 		[Embed(source = "../Assets/Particles/particle.pex", mimeType = "application/octet-stream")]
@@ -25,6 +70,8 @@ package
 		
 		[Embed(source = "../Assets/Particles/particleTexture.png")]
 		public static const particle:Class;
+		
+		//Fondo usado en los creditos
 		
 		[Embed(source = "../Assets/ImagenesSinAtlas/Fondo-01.jpg")]
 		public static const FondoCreditos:Class;
@@ -75,10 +122,20 @@ package
 		[Embed(source="../Assets/AnimacionGato.xml",mimeType="application/octet-stream")]
 		public static const AnimacionGatoXML:Class;
 		
+		[Embed(source="../Assets/AnimacionGoat.png")]
+		public static const AnimacionGoat:Class;
+		
+		[Embed(source="../Assets/AnimacionGoat.xml",mimeType="application/octet-stream")]
+		public static const AnimacionGoatXML:Class;
+		
+		
+		
 		private static var gameTextures:Dictionary = new Dictionary();
 		public static var CiudadesYTituloAtlas:TextureAtlas;
 		public static var SpritesAtlas:TextureAtlas;
 		public static var AnimacionGatoAtlas:TextureAtlas;
+		public static var Ciudades2Atlas:TextureAtlas;
+		public static var AnimacionGoatAtlas:TextureAtlas;
 		
 		
 		/*

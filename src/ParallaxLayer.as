@@ -11,6 +11,8 @@ package
 	{
 		private var image1:Image;
 		private var image2:Image;
+		private var aleatorio:int;
+		private var nombreImagen:String;
 		
 		private var _layer:int;
 		private var _parallax:Number;
@@ -26,9 +28,19 @@ package
 		{
 			this.removeEventListener(starling.events.Event.ADDED_TO_STAGE, onAddedToStage);
 			
+			aleatorio = Math.ceil(Math.random() * 12);
+			nombreImagen = "Ciudad" + aleatorio + "-01";
 			
-			image1 = new Image(Assets.getTexture("TopBg"));
-			image2 = new Image(Assets.getTexture("TopBg"));
+			if(aleatorio > 0 && aleatorio < 7){
+			image1 = new Image(Assets.getAtlas("CiudadesYTitulo", Assets.CiudadesYTituloXML, Assets.CiudadesYTituloAtlas).getTexture(nombreImagen));
+			image2 = new Image(Assets.getAtlas("CiudadesYTitulo", Assets.CiudadesYTituloXML, Assets.CiudadesYTituloAtlas).getTexture(nombreImagen));
+			}
+			else
+			{
+			image1 = new Image(Assets.getAtlas("Ciudades2", Assets.Ciudades2XML, Assets.Ciudades2Atlas).getTexture(nombreImagen));
+			image2 = new Image(Assets.getAtlas("Ciudades2", Assets.Ciudades2XML, Assets.Ciudades2Atlas).getTexture(nombreImagen));
+				
+				}
 			
 			image1.x = 0;
 			image1.y = stage.stageHeight - image1.height;

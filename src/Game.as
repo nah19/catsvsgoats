@@ -53,8 +53,7 @@ package
 				case "Creditos":
 					
 					menuInicio.disposeTemporarily();
-					singlePlayer.initialize();
-					//creditos.initialize();
+					creditos.initialize();
 					
 					break;
 				

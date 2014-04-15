@@ -1,14 +1,23 @@
 package  
 {
+	import starling.display.Image;
 	import starling.display.Sprite;
-	import starling.events.Event;
+	import starling.events.Event; 
+	import starling.filters.BlurFilter;
 	/**
 	 * ...
 	 * @author Marco Domingo & David Rodriguez
 	 */
 	public class SinglePlayer extends Sprite
 	{
-		private var parallax:ParallaxBg;
+		private var parallaxUp:ParallaxBg;
+		private var parallaxDown:ParallaxBg;
+		private var bg1:Image;
+		private var bg2:Image;
+		private var aleatorio:int;
+		private var nombreFondo:String;
+		private var cat:Cat;
+		private var goat:Goat;
 		
 		public function SinglePlayer() 
 		{
@@ -24,10 +33,44 @@ package
 		
 		private function drawGame():void
 		{
+			aleatorio = Math.ceil(Math.random() * 15);
+			nombreFondo = "Fondo" + aleatorio;
+			bg1 = new Image(Assets.getTexture(nombreFondo));
+			this.addChild(bg1);
 			
-			parallax = new ParallaxBg();
-			parallax.speed = 10;
-			this.addChild(parallax);
+			aleatorio = Math.ceil(Math.random() * 15);
+			nombreFondo = "Fondo" + aleatorio;
+			bg2 = new Image(Assets.getTexture(nombreFondo));
+			bg2.y = 360;
+			this.addChild(bg2);
+			
+			parallaxUp = new ParallaxBg();
+			parallaxUp.speed = 10;
+			parallaxUp.y = -360;
+			parallaxUp.filter = BlurFilter.createDropShadow();
+			this.addChild(parallaxUp);
+			
+			parallaxDown = new ParallaxBg();
+			parallaxDown.speed = 10;
+			parallaxDown.y = 0;
+			parallaxDown.filter = BlurFilter.createDropShadow();
+			this.addChild(parallaxDown);
+			
+			cat = new Cat();
+			cat.x = 150
+			cat.y = (stage.stageHeight / 2) - 100;
+			cat.scaleX = 0.8;
+			cat.scaleY = 0.8;
+			this.addChild(cat);
+			
+			goat = new Goat();
+			goat.x = 150
+			goat.y = (stage.stageHeight / 2) + 75;
+			goat.scaleX = 0.45;
+			goat.scaleY = -0.45;
+			
+			this.addChild(goat);
+			
 		}
 		
 		public function disposeTemporarily():void

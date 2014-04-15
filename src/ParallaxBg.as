@@ -30,8 +30,10 @@ package
 		
 		private function onEnterFrame(event:Event):void
 		{
+			
 			parallaxLayer1.x -= Math.ceil(_speed * parallaxLayer1.parallax);
 			if (parallaxLayer1.x < -stage.stageWidth) parallaxLayer1.x = 0;
+			
 		}
 		
 		public function get speed():Number 

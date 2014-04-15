@@ -22,7 +22,7 @@ package
 		var back:Button;
 		var marco:Image;
 		var david:Image;
-		var cat:Cat;
+		
 		
 		public function Credits()
 		{
@@ -57,10 +57,7 @@ package
 			david.y = -250;
 			this.addChild(david);
 			
-			cat = new Cat();
-			cat.x = stage.width / 2;
-			cat.y = stage.height / 2;
-			this.addChild(cat);
+			
 			
 			this.addEventListener(Event.TRIGGERED, sceneManager);
 		}

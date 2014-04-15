@@ -171,6 +171,13 @@ package
 				this.dispatchEvent(new NavigationEvent(NavigationEvent.CHANGE_SCREEN, {id: "Creditos"}, true));
 				
 			}
+			
+			else if (botonClicado == botonArriba)
+			{
+				
+				trace("Enviando evento");
+				this.dispatchEvent(new NavigationEvent(NavigationEvent.CHANGE_SCREEN, {id: "singlePlayer"}, true));
+			}
 		
 		}
 		
