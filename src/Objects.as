@@ -6,6 +6,8 @@ package
 	import starling.display.Sprite;
 	import starling.events.Event;
 	import starling.animation.Juggler;
+	import starling.utils.HAlign;
+	import starling.utils.VAlign;
 	
 	public class Objects extends Sprite
 	{
@@ -58,6 +60,10 @@ package
 			
 			createObstacleArt();
 			//createObstacleCrashArt();
+			
+			alignPivot(HAlign.LEFT, VAlign.BOTTOM);
+			x = 1300;
+			y = 335 ;
 		}
 		
 		

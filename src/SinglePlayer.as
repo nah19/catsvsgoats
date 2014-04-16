@@ -17,8 +17,6 @@ package
 	import flash.utils.Timer
 	import flash.events.TimerEvent;
 	import flash.utils.getTimer;
-	import starling.utils.HAlign;
-	import starling.utils.VAlign;
 	
 	/**
 	 * ...
@@ -117,6 +115,8 @@ package
 					tweenGoat.onComplete = goat.jumpingGoat;
 					Starling.juggler.add(tweenGoat); 
 					
+					
+					
 				} 
 				else
 				{
@@ -157,9 +157,6 @@ package
 				
 				var objetoNuevo:Objects = new Objects(1, 800);
 				
-				objetoNuevo.x = 1300;
-				objetoNuevo.y = 100 ;
-				
 				this.addChild(objetoNuevo);
 				queueObjetos.push(objetoNuevo);
 				
@@ -171,7 +168,7 @@ package
 		
 		private function MoverObjeto(element:*, index:int, arr:Array):void {
 			element.x -= Math.ceil(element.speed * 0.01);
-			//trace(element.name);
+			//trace(element);
 			//trace(Math.ceil(element.speed * 0.01));
 			if (element.x < -200) {
 					//this.removeChild(element);
