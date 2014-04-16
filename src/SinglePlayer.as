@@ -14,6 +14,11 @@ package
 	import starling.animation.Transitions;
 	import starling.core.Starling;
 	import starling.display.Quad;
+	import flash.utils.Timer
+	import flash.events.TimerEvent;
+	import flash.utils.getTimer;
+	import starling.utils.HAlign;
+	import starling.utils.VAlign;
 	
 	/**
 	 * ...
@@ -30,8 +35,13 @@ package
 		private var cat:Cat;
 		private var goat:Goat;
 		private var touch:Touch;
-		
-		
+		private var aleatorioObjetos:int;
+		private var timePrevious:Number;
+		private var timeCurrent:Number;
+		private var elapsed:int;
+		private var tiempoAcumulado:Number;
+		private var queueObjetos:Array = new Array();
+	
 		
 		public function SinglePlayer() 
 		{
@@ -100,9 +110,9 @@ package
 				if (localPos.y>360)
 				{
 					goat.jumpingGoat(true);
-					var tweenGoat:Tween = new Tween(goat, 0.4, Transitions.EASE_IN_OUT);
+					var tweenGoat:Tween = new Tween(goat, 0.45, Transitions.EASE_IN_OUT);
 					tweenGoat.reverse = true;
-					tweenGoat.moveTo( goat.x, goat.y + 100);
+					tweenGoat.moveTo( goat.x, goat.y + 140);
 					tweenGoat.repeatCount = 2;
 					tweenGoat.onComplete = goat.jumpingGoat;
 					Starling.juggler.add(tweenGoat); 
@@ -111,30 +121,74 @@ package
 				else
 				{
 					cat.jumpingCat(true);
-					var tweenCat:Tween = new Tween(cat, 0.4, Transitions.EASE_IN_OUT);
+					var tweenCat:Tween = new Tween(cat, 0.45, Transitions.EASE_IN_OUT);
 					tweenCat.reverse = true;
-					tweenCat.animate("y", cat.y - 100);
+					tweenCat.animate("y", cat.y - 140);
 					tweenCat.repeatCount = 2;
 					tweenCat.onComplete = cat.jumpingCat; 
 					Starling.juggler.add(tweenCat);
 				}
-			}
-			
-			
+			}	
 		}
 		
 		public function disposeTemporarily():void
 		{
 			this.visible = false;
-		
 		}
 		
 		public function initialize():void
 		{
 			this.visible = true;
 			this.addEventListener(TouchEvent.TOUCH, onTouch);
+			this.addEventListener(Event.ENTER_FRAME, onEnterFrame);
+			aleatorioObjetos = Math.ceil(Math.random() * 12);
+			tiempoAcumulado = 100000;
+			
+			
 		}
 		
+		private function onEnterFrame(event:Event):void
+		{
+			tiempoAcumulado += checkElapsed(); 
+			
+			if (tiempoAcumulado/1000 >= aleatorioObjetos) {
+				tiempoAcumulado = 0;
+				aleatorioObjetos = Math.ceil(Math.random() * 6);
+				
+				var objetoNuevo:Objects = new Objects(1, 800);
+				
+				objetoNuevo.x = 1300;
+				objetoNuevo.y = 100 ;
+				
+				this.addChild(objetoNuevo);
+				queueObjetos.push(objetoNuevo);
+				
+				}
+			
+			queueObjetos.forEach(MoverObjeto);
+			
+		}
+		
+		private function MoverObjeto(element:*, index:int, arr:Array):void {
+			element.x -= Math.ceil(element.speed * 0.01);
+			//trace(element.name);
+			//trace(Math.ceil(element.speed * 0.01));
+			if (element.x < -200) {
+					//this.removeChild(element);
+					//queueObjetos.pop();
+				}
+        }
+		
+		private function checkElapsed():Number
+		{
+			
+			timePrevious = timeCurrent;
+			timeCurrent = getTimer();
+			elapsed = (timeCurrent - timePrevious);
+			//trace(elapsed);
+			
+			return elapsed;
+		}
 	}
 
 }

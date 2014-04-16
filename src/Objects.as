@@ -5,6 +5,7 @@ package
 	import starling.display.MovieClip;
 	import starling.display.Sprite;
 	import starling.events.Event;
+	import starling.animation.Juggler;
 	
 	public class Objects extends Sprite
 	{
@@ -15,6 +16,10 @@ package
 		private var obstacleImage:Image;
 		private var obstacleCrashImage:Image;
 		private var obstacleAnimation:MovieClip;
+		private var aleatorio:int;
+		private var arrayObjetos:Array;
+		private var altoImagen:int;
+		private var anchoImagen:int;
 		
 		public function Objects(_type:int, _speed:int = 0)
 		{
@@ -52,21 +57,19 @@ package
 			this.removeEventListener(Event.ADDED_TO_STAGE, onAddedToStage);
 			
 			createObstacleArt();
-			createObstacleCrashArt();
+			//createObstacleCrashArt();
 		}
 		
-		private function createObstacleCrashArt():void
-		{
-			obstacleCrashImage = new Image(Assets.getAtlas("Sprites", Assets.SpritesXML, Assets.SpritesAtlas).getTextures("obstacle_"));
-			obstacleCrashImage.visible = false;
-			this.addChild(obstacleCrashImage);
-		}
 		
 		private function createObstacleArt():void
 		{
+			arrayObjetos = new Array("Object_Avestruz1", "Object_Bart1", "Object_Bici1", "Object_Bici2", "Object_Bici3", "Object_Bici4", "Object_Cabina1", "Object_Carrito1", "Object_Coche1", "Object_Coche2");
+			aleatorio = Math.ceil(Math.random() * arrayObjetos.length);
+			
+			
 			if (_type == 4)
 			{
-				obstacleAnimation = new MovieClip(Assets.getAtlas("Sprites", Assets.SpritesXML, Assets.SpritesAtlas).getTextures("obstacle_"), 10);
+				//obstacleAnimation = new MovieClip(Assets.getAtlas("Sprites", Assets.SpritesXML, Assets.SpritesAtlas).getTexture("Object_"));
 				Starling.juggler.add(obstacleAnimation);
 				obstacleAnimation.x = 0;
 				obstacleAnimation.y = 0;
@@ -74,11 +77,15 @@ package
 			}
 			else
 			{
-				obstacleImage = new Image(Assets.getAtlas("Sprites", Assets.SpritesXML, Assets.SpritesAtlas).getTextures("obstacle_"));
+				obstacleImage = new Image(Assets.getAtlas("Sprites", Assets.SpritesXML, Assets.SpritesAtlas).getTexture(arrayObjetos[aleatorio-1]));
+				
 				obstacleImage.x = 0;
 				obstacleImage.y = 0;
+				anchoImagen = obstacleImage.texture.width;
+				altoImagen = obstacleImage.texture.height;
 				this.addChild(obstacleImage);
 			}
+			
 		}
 		
 		
@@ -103,6 +110,19 @@ package
 			_position = value;
 		}
 		
+		public function alto():Number
+		{
+		
+			return altoImagen;
+			
+		}
+		
+		public function ancho():Number
+		{
+		
+			return anchoImagen;
+			
+		}
 		
 	}
 }
