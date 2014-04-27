@@ -15,10 +15,10 @@ package
 	//Clase que extiende la de Button, puediendo hacer mouseOver, y pudiendo igualar el estado de otro boton al de este
 	public class BotonMejorado extends Button
 	{
-		var defaultTexture:Texture
-		var onMouseOver:Boolean;
-		var isOver:Boolean;
-		var dependencia:BotonMejorado;
+		private var defaultTexture:Texture
+		private var onMouseOver:Boolean;
+		private var isOver:Boolean;
+		private var dependencia:BotonMejorado;
 		
 		public function BotonMejorado(upState:Texture, text:String = "", downState:Texture = null, onMouseOver:Boolean = false, dependencia:BotonMejorado = null)
 		{

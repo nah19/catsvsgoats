@@ -74,7 +74,10 @@ package
 			
 			parallaxDown = new ParallaxBg();
 			parallaxDown.speed = 10;
-			parallaxDown.y = 0;
+			parallaxDown.y = 1080;
+			parallaxDown.scaleY = -1;
+			trace("y"+parallaxDown.y);
+			trace("x"+parallaxDown.x);
 			parallaxDown.filter = BlurFilter.createDropShadow();
 			this.addChild(parallaxDown);
 			
