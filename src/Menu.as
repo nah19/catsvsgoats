@@ -165,20 +165,22 @@ package
 		public function sceneManager(event:Event):void
 		{
 			var botonClicado:BotonMejorado = event.target as BotonMejorado;
-			if (botonClicado == botonCredits)
-			{
-				trace("Enviando evento");
-				this.dispatchEvent(new NavigationEvent(NavigationEvent.CHANGE_SCREEN, {id: "Creditos"}, true));
-				
-			}
 			
-			else if (botonClicado == botonArriba)
+			switch (botonClicado) 
 			{
-				
-				trace("Enviando evento");
-				this.dispatchEvent(new NavigationEvent(NavigationEvent.CHANGE_SCREEN, {id: "singlePlayer"}, true));
+				case botonCredits:
+					this.dispatchEvent(new NavigationEvent(NavigationEvent.CHANGE_SCREEN, {id: "Creditos"}, true));
+					break;
+				case botonArriba:
+					this.dispatchEvent(new NavigationEvent(NavigationEvent.CHANGE_SCREEN, {id: "singlePlayer"}, true));
+					break;
+				case botonAbajo:
+					this.dispatchEvent(new NavigationEvent(NavigationEvent.CHANGE_SCREEN, {id: "multiPlayer"}, true));
+					break;
+				case botonExit:
+					trace("exit");
+					break;
 			}
-		
 		}
 		
 		public function initialize():void

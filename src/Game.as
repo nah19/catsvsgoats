@@ -15,6 +15,7 @@ package
 		private var menuInicio:Menu;
 		private var creditos:Credits;
 		private var singlePlayer:SinglePlayer;
+		private var multiPlayer:MultiPlayer;
 		
 		public function Game()
 		{
@@ -38,6 +39,10 @@ package
 			menuInicio = new Menu();
 			this.addChild(menuInicio);
 			menuInicio.initialize();
+			
+			multiPlayer = new MultiPlayer();
+			multiPlayer.disposeTemporarily();
+			this.addChild(multiPlayer);
 		}
 		
 		public function cambioEscena(event:NavigationEvent):void
@@ -51,16 +56,29 @@ package
 					break;
 					
 				case "Creditos":
-					
 					menuInicio.disposeTemporarily();
 					creditos.initialize();
-					
 					break;
 				
 				case "backMenu": 
 					creditos.disposeTemporarily();
 					menuInicio.initialize();
+					break;
 					
+				case "multiPlayer":
+					menuInicio.disposeTemporarily();
+					multiPlayer.initialize();
+					break;
+				case "mainMenu":
+					singlePlayer.disposeTemporarily();
+					multiPlayer.disposeTemporarily();
+					menuInicio.initialize();
+					break;
+				case "restartSinglePlayer":
+					singlePlayer = new SinglePlayer();
+					singlePlayer.disposeTemporarily();
+					this.addChild(singlePlayer);
+					singlePlayer.initialize();
 					break;
 			}
 		

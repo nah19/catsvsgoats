@@ -13,6 +13,7 @@ package
 	public class Goat extends Sprite 
 	{
 		private var goat:MovieClip;
+		public var goatStatus:String; //estados: jumping, doubleJumping, idle, charging, running
 		
 		public function Goat() 
 		{
@@ -35,10 +36,58 @@ package
 			Starling.juggler.add(goat);
 			this.addChild(goat);
 		}
-		
-		public function jumpingGoat(jump:Boolean = false):void
+				
+		public function switchStatus (newstatus:String = "running"):void
 		{
-			(jump) ? goat.pause() : goat.play();
+			switch (newstatus) {
+				case "jumping" :
+				  goat.pause();
+				  //TODO: crear animacion de salto
+				  break;
+				case "doubleJumping" :
+				  goat.pause();
+				  //TODO: reload animacion de salto
+				  break;
+				case "charging" :
+				  goat.pause();
+				  //TODO: crear animacion de carga
+				  break;
+			  case "falling":
+				  goat.pause();
+				  break;
+				case "running" :
+				  goat.play();
+				  break;
+				default :
+				  trace("estado no reconocido"+newstatus);
+				  break;
+				}
+				goatStatus = newstatus;
+		}
+		
+		public function isJumping ():Boolean
+		{
+			return (goatStatus == "jumping") ? true : false;
+		}
+		
+		public function isDoubleJumping ():Boolean
+		{
+			return (goatStatus == "doubleJumping") ? true : false;
+		}
+		
+		public function isRunning ():Boolean
+		{
+			return (goatStatus == "running") ? true : false;
+		}
+		
+		public function isFalling ():Boolean
+		{
+			return (goatStatus == "falling") ? true : false;
+		}
+		
+		public function getstatus ():String
+		{
+			return goatStatus;
 		}
 	}
 

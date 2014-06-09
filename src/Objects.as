@@ -15,6 +15,7 @@ package
 		private var _speed:int;
 		private var _alreadyHit:Boolean;
 		private var _position:String;
+		private var _obstacleID:int;
 		private var obstacleImage:Image;
 		private var obstacleCrashImage:Image;
 		private var obstacleAnimation:MovieClip;
@@ -23,12 +24,13 @@ package
 		private var altoImagen:int;
 		private var anchoImagen:int;
 		
-		public function Objects(_type:int, _speed:int = 0)
+		public function Objects(_type:int, _speed:int = 0, _obstacleID:int = 0)
 		{
 			super();
 			
 			this._type = _type;
 			this._speed = _speed;
+			this._obstacleID = _obstacleID;
 			
 			_alreadyHit = false;
 			
@@ -58,16 +60,33 @@ package
 		{
 			this.removeEventListener(Event.ADDED_TO_STAGE, onAddedToStage);
 			
-			createObstacleArt();
-			//createObstacleCrashArt();
-			
-			alignPivot(HAlign.LEFT, VAlign.BOTTOM);
-			x = 1300;
-			y = 335 ;
+			if (_type == 3)
+			{
+				createObstacleArt(_obstacleID);
+				alignPivot(HAlign.LEFT, VAlign.BOTTOM);
+				x = 1300;
+				y = 390;
+				scaleY = -1;
+			} 
+			else if (_type == 2)
+			{
+				createObstacleArt();
+				alignPivot(HAlign.LEFT, VAlign.BOTTOM);
+				x = 1300;
+				y = 390;
+				scaleY = -1;
+			}
+			else
+			{
+				createObstacleArt();
+				alignPivot(HAlign.LEFT, VAlign.BOTTOM);
+				x = 1300;
+				y = 335;	
+			}
 		}
 		
 		
-		private function createObstacleArt():void
+		private function createObstacleArt(obstacle:int = 999):void
 		{
 			arrayObjetos = new Array("Object_Avestruz1", "Object_Bart1", "Object_Bici1", "Object_Bici2", "Object_Bici3", "Object_Bici4", "Object_Cabina1", "Object_Carrito1", "Object_Coche1", "Object_Coche2");
 			aleatorio = Math.ceil(Math.random() * arrayObjetos.length);
@@ -83,7 +102,9 @@ package
 			}
 			else
 			{
-				obstacleImage = new Image(Assets.getAtlas("Sprites", Assets.SpritesXML, Assets.SpritesAtlas).getTexture(arrayObjetos[aleatorio-1]));
+				var obstacleKey:int = (obstacle == 999 ? aleatorio - 1 : obstacle);
+				this._obstacleID = obstacleKey;
+				obstacleImage = new Image(Assets.getAtlas("Sprites", Assets.SpritesXML, Assets.SpritesAtlas).getTexture(arrayObjetos[obstacleKey]));
 				
 				obstacleImage.x = 0;
 				obstacleImage.y = 0;
@@ -94,7 +115,10 @@ package
 			
 		}
 		
-		
+		public function get obstacleID():int
+		{
+			return _obstacleID;
+		}
 		
 		public function get speed():int
 		{
